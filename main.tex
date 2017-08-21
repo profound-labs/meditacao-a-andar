@@ -1,0 +1,88 @@
+\documentclass[
+  final,
+  babelLanguage=british,
+  %desktopVersion,
+  %showtrims,
+  %overleaf,
+]{anecdote}
+
+%\graphicspath{{./assets/photos/300dpi/}}
+\graphicspath{{./assets/photos/92dpi/}}
+
+% NOTE: pdfinfo tags and hyperref metadata are set in the documentclass.
+
+% Page size: 6x9 inch
+% Body text: 10.5 / 15 pt
+
+\usepackage{local}
+
+%% Details of the book
+%% ===================
+
+\title{Meditação a Andar}
+\subtitle{}
+\author{Ajahn Nyanadhammo}
+\publisher{Publicações Sumedhārāma}
+\date{2017-08-20}
+\editionInfo{2\textsuperscript{a} Edição, printed in Malaysia, 2018}% TODO review edition info
+\ISBN{000-000-0000-00-0}% TODO update ISBN
+
+% === Metadata ===
+
+\pdfinfo{%
+  /Title (\thetitle)%
+  /Author (\theauthor)
+  /Subject (Meditação a Andar)
+  /Keywords (buddhism, Dhamma, meditação)
+  /GTS_PDFXVersion (PDF/X-1:2001)%
+  /GTS_PDFXConformance (PDF/X-1a:2001)%
+}
+
+%% === Load further packages ===
+
+%% === Hyphenation exceptions and corrections ===
+
+\hyphenation{London}
+
+\begin{document}
+
+\frontmatter
+
+\ifdesktopversion
+\desktopCover{\includegraphics[height=\paperheight]{./desktop-cover.png}}
+\fi
+
+\input{./manuscript/tex/titlepage.tex}
+
+\input{./manuscript/tex/copyright.tex}
+
+\input{./manuscript/tex/dedication.tex}
+
+
+\cleartorecto
+\tableofcontents*
+
+% Page 1 is the first page of the first chapter.
+\mainmatter
+
+% TODO rename? This is not a frontmatter introduction
+\input{./manuscript/tex/01-introduction.tex}
+
+\input{./manuscript/tex/02-preparacao.tex}
+
+\input{./manuscript/tex/03-objetos.tex}
+
+\input{./manuscript/tex/04-conclusao.tex}
+
+\backmatter
+
+\input{./manuscript/tex/abbreviations.tex}
+
+\input{./manuscript/tex/copyright-details.tex}
+
+% Add an extra page to complete the last sheet.
+\ifodd\thepage
+\newpage\thispagestyle{empty}\mbox{}
+\fi
+
+\end{document}
