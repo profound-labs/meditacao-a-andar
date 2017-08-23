@@ -552,12 +552,6 @@ philo-sophical munindo amaravati thai-land}
 \item[]}%
 {\endlist}
 
-%\newcommand{\sidebarQuote}[1]{%
-%  \begin{minipage}{\linewidth - 2\quoteMargin}%
-%    #1
-%  \end{minipage}%
-%}
-
 \newlength{\quoteRuleWidth}
 \newlength{\quoteTopBotSep}
 \newlength{\quoteHeight}
