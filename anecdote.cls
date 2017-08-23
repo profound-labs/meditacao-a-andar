@@ -128,6 +128,7 @@
 \RequirePackage{titletoc}
 \RequirePackage{enumitem}
 \RequirePackage{longtable}
+\RequirePackage{environ}
 
 \RequirePackage{tikz}
 \usetikzlibrary{positioning}
@@ -144,7 +145,7 @@
 \definecolor{chaptertitlefootnote}{gray}{0.4}
 \definecolor{chapterauthor}{gray}{0.3}
 \definecolor{chapternote}{gray}{0.3}
-\definecolor{section}{gray}{0.5}
+\definecolor{section}{gray}{0.2}
 \definecolor{tocleftside}{gray}{0.5}
 \definecolor{tocleftsidepart}{gray}{0.2}
 \definecolor{partname}{gray}{0.5}
@@ -169,15 +170,15 @@
   BoldItalicFont = GenBkBasBI.ttf,
 ]{GentiumPlus-R.ttf}
 
-\newfontfamily\crimsonRomanFont[
-  SmallCapsFeatures= { LetterSpace = 0.2 },
-  BoldFont = Crimson-Semibold.otf,
-  ItalicFont = Crimson-Italic.otf,
-]{Crimson-Roman.otf}
-
-\newfontfamily\crimsonRomanFontOldNum[
-  Numbers = OldStyle,
-]{Crimson-Roman.otf}
+%\newfontfamily\crimsonRomanFont[
+%  SmallCapsFeatures= { LetterSpace = 0.2 },
+%  BoldFont = Crimson-Semibold.otf,
+%  ItalicFont = Crimson-Italic.otf,
+%]{Crimson-Roman.otf}
+%
+%\newfontfamily\crimsonRomanFontOldNum[
+%  Numbers = OldStyle,
+%]{Crimson-Roman.otf}
 
 \newfontfamily\gentiumFont[
   ItalicFont = GentiumPlus-I.ttf,
@@ -185,55 +186,55 @@
   BoldItalicFont = GenBkBasBI.ttf,
 ]{GentiumPlus-R.ttf}
 
+\newfontfamily\alegreyaSansFont[
+  ItalicFont = AlegreyaSans-MediumItalic.otf,
+]{AlegreyaSans-Medium.otf}
+
+\newfontfamily\alegreyaSansLightFont[
+  ItalicFont = AlegreyaSans-LightItalic.otf,
+]{AlegreyaSans-Light.otf}
+
 % header and footer
 
-\newcommand\headerFont\crimsonRomanFont
+\newcommand\headerFont\alegreyaSansLightFont
 \newcommand\footerFont\gentiumFont
 \newcommand\pageNumFont\gentiumFont
 
 % chapter and section
 
-\newcommand\partTitleFont\crimsonRomanFont
+\newcommand\partTitleFont\alegreyaSansLightFont
 
-\newcommand\chapterNameFont\crimsonRomanFont
-\newcommand\chapterTitleFont\crimsonRomanFont
-\newcommand\chapterNumberFont\crimsonRomanFont
-\newcommand\chapterAuthorFont\crimsonRomanFont
-\newcommand\chapterNoteFont\crimsonRomanFont
+\newcommand\chapterNameFont\alegreyaSansLightFont
+\newcommand\chapterTitleFont\alegreyaSansLightFont
+\newcommand\chapterNumberFont\alegreyaSansFont
+\newcommand\chapterAuthorFont\alegreyaSansLightFont
+\newcommand\chapterNoteFont\alegreyaSansLightFont
 
-\newcommand\sectionFont\crimsonRomanFont
+\newcommand\sectionFont\alegreyaSansLightFont
+
+% quote
+
+\newcommand\sideruleQuoteFont\alegreyaSansLightFont
 
 % toc
 
-\newcommand\tocFont\crimsonRomanFont
-\newcommand\tocFontOldNum\crimsonRomanFontOldNum
+\newcommand\tocFont\alegreyaSansLightFont
+\newcommand\tocFontOldNum\alegreyaSansLightFont
 
 % Some default font sizes, use \renewcommand to adjust
 
-\newcommand{\chapterNameSize}
-  {\@setfontsize\chapterNameSize{22}{24}}
-\newcommand{\chapterNumberSize}
-  {\@setfontsize\chapterNumberSize{22}{24}}
-\newcommand{\chapterTitleSize}
-  {\@setfontsize\chapterTitleSize{13}{16.5}}
-\newcommand{\chapterTitleFootnoteSize}
-  {\@setfontsize\chapterTitleFootnoteSize{16}{30}}
-\newcommand{\chapterAuthorSize}
-  {\@setfontsize\chapterAuthorSize{12}{14}}
-\newcommand{\chapterNoteSize}
-  {\@setfontsize\chapterNoteSize{13}{15}}
-\newcommand{\footerSize}
-  {\@setfontsize\footerSize{10.5}{10.5}}
-\newcommand{\headerSize}
-  {\@setfontsize\headerSize{10}{10}}
-%\newcommand{\pageNumSize}
-%  {\@setfontsize\pageNumSize{10}{12}}
+\newcommand{\chapterNameSize}{\@setfontsize          \chapterNameSize          {22}{24}}
+\newcommand{\chapterNumberSize}{\@setfontsize        \chapterNumberSize        {22}{24}}
+\newcommand{\chapterTitleSize}{\@setfontsize         \chapterTitleSize         {13}{16.5}}
+\newcommand{\chapterTitleFootnoteSize}{\@setfontsize \chapterTitleFootnoteSize {16}{30}}
+\newcommand{\chapterAuthorSize}{\@setfontsize        \chapterAuthorSize        {12}{14}}
+\newcommand{\chapterNoteSize}{\@setfontsize          \chapterNoteSize          {13}{15}}
+\newcommand{\footerSize}{\@setfontsize               \footerSize               {10.5}{10.5}}
+\newcommand{\headerSize}{\@setfontsize               \headerSize               {10}{10}}
 
-\newcommand{\smaller}
-  {\@setfontsize\smaller{9}{11}}
+\newcommand{\smaller}{\@setfontsize\smaller{9}{11}}
 
-\newcommand{\copyrightsize}
-  {\@setfontsize\copyrightsize{9}{11}}
+\newcommand{\copyrightsize}{\@setfontsize\copyrightsize{9}{11}}
 
 % foreign language wrappers
 
@@ -246,7 +247,8 @@
 \RequirePackage[final,babel=true]{microtype}
 
 % Tracking for uppercase section heading
-\SetTracking[spacing={400,100,}]{encoding=*, family={Crimson-Roman.otf}}{20}
+\SetTracking[spacing={400,100,}]{encoding=*, family={AlegreyaSans-Medium.otf}}{20}
+\SetTracking[spacing={400,100,}]{encoding=*, family={AlegreyaSans-Light.otf}}{20}
 
 % === hyperref ===
 
@@ -322,7 +324,7 @@
 % memoir's more allowing penalties
 \midsloppy
 
-\renewcommand\britishhyphenmins{{3}{3}}
+\renewcommand\portuguesehyphenmins{{3}{3}}
 
 \hyphenpenalty=700
 \exhyphenpenalty=50
@@ -549,6 +551,51 @@ philo-sophical munindo amaravati thai-land}
     \partopsep     0pt}%
 \item[]}%
 {\endlist}
+
+%\newcommand{\sidebarQuote}[1]{%
+%  \begin{minipage}{\linewidth - 2\quoteMargin}%
+%    #1
+%  \end{minipage}%
+%}
+
+\newlength{\quoteRuleWidth}
+\newlength{\quoteTopBotSep}
+\newlength{\quoteHeight}
+
+\setlength{\quoteTopBotSep}{15pt}
+
+\newcommand{\sideruleQuoteFmt}[1]{%
+  \begin{minipage}{\linewidth - 40pt}%
+    \sideruleQuoteFont\Large\color[gray]{0.2}%
+    #1%
+  \end{minipage}%
+}
+
+\definecolor{quoteRuleFill}{gray}{0.95}
+\definecolor{quoteRule}{gray}{0.7}
+
+% #1: quote rule width
+\NewEnviron{siderule-quote}[1][8pt]%
+{%
+  \setlength{\quoteRuleWidth}{#1}%
+  \settototalheight{\quoteHeight}{\sideruleQuoteFmt{\BODY}}%
+  \begin{tikzpicture}%
+    \node (box) [draw=none, rectangle,
+    minimum width={\linewidth - \quoteRuleWidth},
+    minimum height={\quoteHeight + 2\quoteTopBotSep},
+    inner sep=0pt, fill=quoteRuleFill] {};
+    %
+    \node (a) [above left=0pt and 0pt of box.north west] {};
+    \node (b) [below left=0pt and 0pt of box.south west] {};
+    %
+    \draw [line width=\quoteRuleWidth, draw=quoteRule] (a) -- (b);
+    %
+    \node (quote) [below right=\quoteTopBotSep and {20pt - 0.5\quoteRuleWidth} of box.north west,
+                   anchor=north west, draw=none, inner sep=0pt] {%
+      \sideruleQuoteFmt{\BODY}%
+    };
+  \end{tikzpicture}%
+}
 
 \newlength{\diaItemIndent}
 \setlength{\diaItemIndent}{-\quoteMargin}
@@ -843,7 +890,7 @@ philo-sophical munindo amaravati thai-land}
 
 % alias the pagestyles into semantic names, "where it is used"
 
-\aliaspagestyle{normalpage}{topbottomcentered}
+\aliaspagestyle{normalpage}{bottomcenter}
 \aliaspagestyle{chapter}{bottomcenter}
 \aliaspagestyle{book}{empty}
 \aliaspagestyle{part}{empty}
@@ -1054,24 +1101,27 @@ philo-sophical munindo amaravati thai-land}
 
 \makechapterstyle{lowtitle}{
   \chapterstyle{default}
-  \setlength{\beforechapskip}{30mm}
-  \setlength{\chapterTitleLeftSkip}{17pt}
+  \setlength{\beforechapskip}{10mm}
+  \setlength{\chapterTitleLeftSkip}{0pt}
   \renewcommand\printchaptername{}
   \renewcommand\chapternamenum{}
   \renewcommand\chapnumfont{\chapterNumberFont\chapterNumberSize}
   \renewcommand\printchapternum{%
     \chapnumfont\color{chapternum}%
-    \hspace*{\chapterTitleLeftSkip}\thechapter%
+    {\centering \thechapter \par}%
   }
   \setlength{\midchapskip}{2\onelineskip}
   \renewcommand\afterchapternum{\par\nobreak\vskip \midchapskip}
   \renewcommand\printchapternonum{}
   \renewcommand\chaptitlefont{\chapterTitleFont\chapterTitleSize}
   \renewcommand*\printchaptertitle[1]{%
-    \raggedright\hspace*{\chapterTitleLeftSkip}%
-    \parbox{\linewidth - \chapterTitleLeftSkip}{%
-      \raggedright\chaptitlefont\color{chaptertitle}%
+    \centering%
+    \parbox{0.8\linewidth}{%
+      \centering\chaptitlefont\color{chaptertitle}%
       \textls*{\MakeUppercase{##1}}%
+      \par
+      \vspace*{0.5\onelineskip}%
+      {\color[gray]{0.7}\rule{\linewidth}{1pt}}%
       \ifchapterfootnote%
         \hspace*{2pt}\theChapterFootnoteMark%
       \fi%
@@ -1528,8 +1578,8 @@ philo-sophical munindo amaravati thai-land}
 
 % === normalsize ===
 
-\def\BOOK@fontSizePt{10.5}
-\def\BOOK@lineHeightPt{15}
+\def\BOOK@fontSizePt{11}
+\def\BOOK@lineHeightPt{16}
 
 \renewcommand{\normalsize}{%
   \@setfontsize\normalsize\BOOK@fontSizePt\BOOK@lineHeightPt
@@ -1552,8 +1602,8 @@ philo-sophical munindo amaravati thai-land}
 
 % === setup page layout ===
 
-\setlength{\BOOK@paperHeight}{9in}
-\setlength{\BOOK@paperWidth}{6in}
+\setlength{\BOOK@paperHeight}{8in}
+\setlength{\BOOK@paperWidth}{5.25in}
 
 \ifshowtrims
   \stockaiv% use A4 paper size to show trims
@@ -1575,10 +1625,10 @@ philo-sophical munindo amaravati thai-land}
 %\settypeblocksize{34\baselineskip + \topskip}{*}{0.599}% 1/1.667, 3:5, major 6th
 %\setlrmargins{*}{20mm}{*}% 22.71669mm and 19.99976mm
 
-\settypeblocksize{190mm}{110mm}{*}
-\setlrmargins{*}{20mm}{*}
+\settypeblocksize{27\baselineskip + \topskip}{95mm}{*}% 155.6mm / 94.89mm = 1.63979344504
+\setlrmargins{*}{17mm}{*}
 
-\setulmargins{42pt}{*}{*}% Based on Tall Pentagon, 1.701
+\setulmargins{20mm}{*}{*}%
 \setlength{\footskip}{30pt}
 
 % Fixes these warnings:
@@ -1593,16 +1643,16 @@ philo-sophical munindo amaravati thai-land}
 \typeoutlayout
 
 % ******************************************************
-% Stock height and width: 650.43pt by 433.62pt
+% Stock height and width: 578.15999pt by 379.4175pt
 % Top and edge trims: 0pt and 0pt
-% Page height and width: 650.43pt by 433.62pt
-% Text height and width: 551pt by 312pt
-% Spine and edge margins: 63.73419pt and 56.9055pt
-% Upper and lower margins: 42pt and 57.43pt
+% Page height and width: 578.15999pt by 379.4175pt
+% Text height and width: 443pt by 270pt
+% Spine and edge margins: 60.74664pt and 48.36967pt
+% Upper and lower margins: 56.9055pt and 78.25449pt
 % Headheight and headsep: 15.6pt and 19.8738pt
 % Footskip: 30pt
 % Columnsep and columnseprule: 10pt and 0pt
-% Marginparsep and marginparwidth: 7pt and 42.9055pt
+% Marginparsep and marginparwidth: 7pt and 34.36967pt
 % Sidecapsep and sidecapwidth: 7pt and 111pt
 % Sidebarhsep and sidebarwidth: 7pt and 111pt
 % Sidebarvsep and sidebartopsep: 13.6pt and 0pt
@@ -1613,16 +1663,16 @@ philo-sophical munindo amaravati thai-land}
 % 
 % 
 % ******************************************************
-% Stock height and width: 228.59732mm by 152.39821mm
+% Stock height and width: 203.19762mm by 133.34843mm
 % Top and edge trims: 0mm and 0mm
-% Page height and width: 228.59732mm by 152.39821mm
-% Text height and width: 193.65208mm by 109.65417mm
-% Spine and edge margins: 22.39973mm and 19.99976mm
-% Upper and lower margins: 14.76114mm and 20.1841mm
+% Page height and width: 203.19762mm by 133.34843mm
+% Text height and width: 155.69487mm by 94.89304mm
+% Spine and edge margins: 21.34975mm and 16.99979mm
+% Upper and lower margins: 19.99976mm and 27.50298mm
 % Headheight and headsep: 5.4827mm and 6.98476mm
 % Footskip: 10.54367mm
 % Columnsep and columnseprule: 3.51456mm and 0mm
-% Marginparsep and marginparwidth: 2.46019mm and 15.07938mm
+% Marginparsep and marginparwidth: 2.46019mm and 12.0794mm
 % Sidecapsep and sidecapwidth: 2.46019mm and 39.01158mm
 % Sidebarhsep and sidebarwidth: 2.46019mm and 39.01158mm
 % Sidebarvsep and sidebartopsep: 4.77979mm and 0mm
