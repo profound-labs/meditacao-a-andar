@@ -69,7 +69,8 @@ RES=""
 #RES="$RES"$(grep -E 'FIXME' "$OUT_FILE")
 #RES="$RES"$(grep -E "attr:<attribution=" "$OUT_FILE")
 RES="$RES"$(grep -E "\`|'|’'" "$OUT_FILE")
-RES="$RES"$(grep -E '"' "$OUT_FILE")
+# there is "- as repeat-hyphen in Portuguese
+#RES="$RES"$(grep -E '"' "$OUT_FILE")
 
 if [ "$RES" != "" ]; then
     echo "WARNING! These lines don't look good:"

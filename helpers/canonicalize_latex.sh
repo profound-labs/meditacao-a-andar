@@ -13,6 +13,8 @@ perl -0777 -pe "s/\\\\begin\{lpchah\}(.*?)\\\\end\{lpchah\}/\\\\begin{quote}% <a
 sed -e '/\\begin[{]dialogue[}]/,/\\end[{]dialogue[}]/{ s/^\\item *//; };' | \
 # \begin{dialogue} > \begin{quote}
 perl -0777 -pe "s/\\\\begin\{dialogue\}(.*?)\\\\end\{dialogue\}/\\\\begin{quote}% <attr role=dialogue>\n\1\\\\end{quote}/gs" | \
+# \begin{siderule-quote} > \begin{quote}
+perl -0777 -pe "s/\\\\begin\{siderule-quote\}(.*?)\\\\end\{siderule-quote\}/\\\\begin{quote}\n\1\\\\end{quote}/gs" | \
 # \begin{openingVerse} > \begin{verse}
 perl -0777 -pe "s/\\\\begin\{openingVerse\}(.*?)\\\\end\{openingVerse\}/\\\\begin{verse}% <attr role=opening-verse>\n\\\\itshape \1\\\\end{verse}/gs" | \
 # glossarydescription
@@ -51,6 +53,7 @@ sed 's/\\clearpage//g' |\
 sed 's/\\parskip//g' |\
 sed 's/\\baselineskip//g' |\
 sed 's/\\linewidth//g' |\
+sed 's/\\Large//g' |\
 sed 's/\\sectionBreak/\n\n<* * * * *>\n\n/g' |\
 sed 's/\\quoteBreak/\n\n<* * *>\n\n/g' |\
 perl -0777 -pe "s/\{[\s\%]+\}//gs"

@@ -1,35 +1,37 @@
 = Meditação a Andar
-The Author
-v1.0, 2017-08-19
-:booktitle: Book Title
-:revdate: 2017-08-19
-:description: Book Subtitle
-:doctype: book
+:booktitle: {doctitle}
+:author: Ajahn Nyanadhammo
 :creator: {author}
-:lang: en
-//:keywords: subject, topic
+:version: v1.0
+:revdate: 2017-10-07
+:doctype: book
+:lang: pt
+:pubs-logo: sumedharama-w100.jpg
+:publisher: Publicações Sumedhārāma
+:publisher-website: www.sumedharama.pt
+:keywords: Ajahn Nyanadhammo, Dhamma, Buddhism, RELIGION / Buddhism / Theravada
 :copyright: CC-BY-NC-ND 4.0
 :isbn: 000-0-00000-000-0
+:identifier: isbn:{isbn}
+:source: https://forestsangha.org
 :imagesdir: assets/photos/92dpi-ebook-sRGB
 :includes: manuscript/asciidoc
 :front-cover-image: image:desktop-cover.png[Front Cover,800,1200]
 :toc: left
-:toc-title: Contents
+:toc-title: Índice
 :toclevels: 0
-
-include::{includes}/dedication.adoc[]
-
-include::{includes}/foreword.adoc[]
-
-include::{includes}/preface.adoc[]
 
 include::{includes}/titlepage.adoc[]
 
-include::{includes}/01-chapter-one.adoc[]
+include::{includes}/01-introduction.adoc[]
 
-include::{includes}/02-chapter-two.adoc[]
+include::{includes}/02-preparacao.adoc[]
 
-include::{includes}/glossary.adoc[]
+include::{includes}/03-objectos.adoc[]
+
+include::{includes}/04-conclusao.adoc[]
+
+include::{includes}/abbreviations.adoc[]
 
 include::{includes}/copyright.adoc[]
 
