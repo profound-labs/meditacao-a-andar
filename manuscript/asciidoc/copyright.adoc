@@ -1,6 +1,39 @@
 [#copyright, colophon]
 = Copyright
 
-TODO
+{booktitle} +
+por {author}
 
-CC-BY-NC-ND 4.0
+Publicações Sumedhārāma +
+link:http://sumedharama.pt[www.sumedharama.pt]
+
+Este livro encontra-se disponível para distribuição gratuita em +
+link:http://fsbooks.org/[www.fsbooks.org]
+
+Digital Edition {version}
+
+ePub ISBN {isbn}
+
+This electronic edition was published on {revdate}
+
+Copyright © 2018 Publicações Sumedhārāma
+
+Traduzido de José Megre
+
+Traduzido do original '`Walking Meditation -- In the Thai Forest Tradition`'
+
+Coppyright © The Sangha, Wat Pah Nanachat, 2003
+
+Cover Photograph: Ajahn Kancano
+
+Editado a partir de duas palestras de Dhamma oferecidas por
+Ajahn Nyanadhammo, no Buddhist Centre Dhammaloka, em 31 de Julho de
+1992, e no Bodhinyana Forest Monastery, em 22 de Janeiro de 2002, ambos
+em Perth, na Austrália.
+
+image::cc-by-nc-nd.png[creative commons, role=cc-icon]
+
+Este trabalho está licenciado com uma Licença Creative Commons Atribuição-NãoComercial-SemDerivações 4.0 Internacional.
+
+<http://creativecommons.org/licenses/by-nc-nd/4.0/>
+
