@@ -1360,3 +1360,10 @@ figure.image img.quotebreak {
 .blockquote.quote > blockquote em {
   font-style: normal;
 }
+.blockquote.sidebar-quote {
+  padding: 1em;
+  border-left: 2px solid #666665;
+}
+.blockquote.sidebar-quote > blockquote:first-child p {
+  margin-top: 0pt;
+}

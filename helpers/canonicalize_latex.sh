@@ -43,6 +43,8 @@ perl -0777 -pe "s/\\\\label\{.*?\}//gs" | \
 perl -0777 -pe "s/\\\\enlargethispage\**\{.*?\}//gs" | \
 perl -0777 -pe "s/\\\\setlength\{.*?\}\{.*?\}//gs" | \
 perl -0777 -pe "s/\\\\pageref\{.*?\}/FIXME:pageref/gs" | \
+# Repeating hyphen (in Portuguese)
+sed 's/\(\w\)"-\(\w\)/\1-\2/g' |\
 sed 's/^\\vspace\**[{][^}]\+[}]%*$//g' |\
 sed 's/\\thinspace\s*/~/g' |\
 sed 's/\\par/\n\n/g' |\
