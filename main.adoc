@@ -9,11 +9,11 @@
 :pubs-logo: sumedharama-w100.jpg
 :publisher: Publicações Sumedhārāma
 :publisher-website: www.sumedharama.pt
+:source: https://forestsangha.org
 :keywords: Ajahn Nyanadhammo, Dhamma, Buddhism, RELIGION / Buddhism / Theravada
 :copyright: CC-BY-NC-ND 4.0
 :isbn: 000-0-00000-000-0
 :identifier: isbn:{isbn}
-:source: https://forestsangha.org
 :imagesdir: assets/photos/92dpi-ebook-sRGB
 :includes: manuscript/asciidoc
 :front-cover-image: image:desktop-cover.png[Front Cover,800,1200]
