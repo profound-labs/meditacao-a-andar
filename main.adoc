@@ -3,7 +3,7 @@
 :author: Ajahn Nyanadhammo
 :creator: {author}
 :version: v1.0
-:revdate: 2017-10-14
+:revdate: 2017-10-19
 :doctype: book
 :lang: pt
 :pubs-logo: sumedharama-w100.jpg
@@ -12,7 +12,7 @@
 :source: https://forestsangha.org
 :keywords: Ajahn Nyanadhammo, Dhamma, Buddhism, RELIGION / Buddhism / Theravada
 :copyright: CC-BY-NC-ND 4.0
-:isbn: 000-0-00000-000-0
+:isbn: 978-989-8691-66-8
 :identifier: isbn:{isbn}
 :imagesdir: assets/photos/92dpi-ebook-sRGB
 :includes: manuscript/asciidoc

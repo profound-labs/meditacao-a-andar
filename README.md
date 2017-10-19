@@ -5,14 +5,14 @@ Por Ajahn Nyanadhammo
 
 Tradução de José Megre
 
-Paperback status: **IN PROGRESS**  
-Ebook status: **N/A**
+Paperback status: **COMPLETED**  
+Ebook status: **COMPLETED**
 
 **Second edition, 2018**
 
-ISBN for paperback: `000-000-0000-00-0`
+ISBN for paperback: `978-989-8691-65-1`
 
-ISBN for ebooks: `000-0-00000-000-0`
+ISBN for ebooks: `978-989-8691-66-8`
 
 First edition, 2013
 
